@@ -1,0 +1,54 @@
+JFDML JFormDesigner: "5.1.2.0.134" Java: "1.8.0_77" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp scrollPane1::l::384:x}"
+			"$verticalGroup": "par l {comp scrollPane1::l::243:x}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menuFile"
+					"text": "文件  "
+					"actionCommand": "text"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItemInput"
+						"text": "EXCEL文件"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "menuItemInputMouseReleased", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItemOutput"
+						"text": "MT940文件"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "menuItemOutputMouseReleased", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menuTrans"
+					"text": "转换   "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItemTrans"
+						"text": "立即转换文件"
+						"actionCommand": "text"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "menuItemTransMouseReleased", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menuAbout"
+					"text": "关于   "
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
