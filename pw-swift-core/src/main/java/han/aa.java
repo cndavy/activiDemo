@@ -109,7 +109,7 @@ public static void main(String[] args){
 }
     public static void writeMt940(){
         final MT940 m = new MT940();
-       //m.setSender("");//青岛建行
+       //m.setSender("");
         //m.setReceiver("");
 
         SwiftBlock1 b1 = new SwiftBlock1();
